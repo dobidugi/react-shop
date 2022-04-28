@@ -1,0 +1,23 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form label {
+    font-weight: bold;
+    margin-right: 0.2rem;
+}
+
+.form input {
+    width: 3rem;
+}
+
+.form button {
+    background-color: rgb(153, 80, 51);
+    padding: 0.2rem 2rem;
+    border-radius: 15px;
+    color: white;
+    margin-top: 0.3rem;
+}
