@@ -1,0 +1,25 @@
+.button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    padding: 0.75em 3em;
+    background-color: orangered;
+    border-radius: 20px;
+}
+
+.icon {
+    margin-right: 0.2em;
+}
+
+.count {
+    padding: 0.3em 0.5em;
+    margin-left: 1em;
+    background-color: orange;
+    border-radius: 100%;
+}
+
+.button:hover {
+    background-color: red;
+}
