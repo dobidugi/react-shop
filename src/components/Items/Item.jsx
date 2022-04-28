@@ -1,5 +1,6 @@
 import React from "react";
 import classes from "./Item.module.css";
+import ItemForm from "./ItemForm";
 function Item(props) {
     const { name, description, price } = props; 
     const dPrice = `$${price}`;
@@ -10,7 +11,7 @@ function Item(props) {
                 <p className={classes.description}>{description}</p>
                 <p className={classes.price}>{dPrice}</p>
             </div>
-            <div></div>    
+            <div><ItemForm /></div>    
         </li>
     );
 }
