@@ -3,13 +3,14 @@ import CartContext from "./cart-context";
 
 function CartContextProvider(props) {
     const [items, setItems] = useState([]);
-    const addItemToCartHandler = (id) => {
-
+    const addItemToCartHandler = (item) => {
+        setItems(items.concat(item));
     };
 
     const removeItemToCartHandler = (id) => {
-
+        setItems( items.map(item => item.id === id));
     };
+    
     const cartContext = {
         items: items,
         addItem: addItemToCartHandler,

@@ -1,13 +1,14 @@
 import React from "react";
 
-function LabelInput(props) {
+
+function LabelInput(props, ref) {
     const { label, input } = props;
     return (
         <div>
             <label htmlFor={input.id}>{label}</label>
-            <input {...input}/>
+            <input ref={ref} {...input}/>
         </div>
     );
 }
 
-export default LabelInput;
+export default React.forwardRef(LabelInput);
