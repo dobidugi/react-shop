@@ -29,10 +29,11 @@ function ItemList() {
             price: 18.99,
         },
     ];
-
+    
     const newList = DUMMY_ITEM.map(
         item => <Item 
             key={item.id}
+            id={item.id}
             name={item.name}
             description={item.description}
             price={item.price}

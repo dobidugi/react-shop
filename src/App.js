@@ -2,6 +2,7 @@ import Cart from "components/Cart/Cart";
 import ItemList from "components/Items/ItemList";
 import React, { useState } from "react";
 import Header from "./components/Layout/Header/Header";
+import CartContextProvider from "./store/CartContextProvider";
 
 function App() {
     const [cartIsShown, setCartIsShown] = useState(false);
@@ -14,11 +15,11 @@ function App() {
         setCartIsShown(false);
     };
     return (
-        <React.Fragment>
+        <CartContextProvider>
             {cartIsShown && <Cart onClose={onCloseCart}/>}
             <Header onShowCart={onShowCart}/>
             <ItemList />
-        </React.Fragment>
+        </CartContextProvider>
     );
 }
 

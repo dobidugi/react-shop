@@ -1,14 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Cart.module.css";
 import Modal from "../UI/Modal";
+import CartContext from "../../store/cart-context";
 function Cart(props) {
     const { onClose } = props;
-    const DUMY_CARTLIST = [
-        { id: "c1", name: "Sushi", amount: 2, price: 12.99 }
-    ];
+    const ctx = useContext(CartContext);
     let price = 0;
-    DUMY_CARTLIST.forEach(item => price += (item.amount * item.price));
-    const newCartList = DUMY_CARTLIST.map(item => <li className={classes["cart-item"]} key={item.id}>{item.name}</li>);
+    ctx.items.forEach(item => price += (item.amount * item.price));
+    const newCartList = ctx.items.map(item => <li className={classes["cart-item"]} key={item.id}>{item.name}</li>);
     return (
         <Modal onClose={onClose} className={classes["modal__inner"]}>
             <ul className={classes["cart-list"]}>
