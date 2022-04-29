@@ -1,13 +1,15 @@
+import Cart from "components/Cart/Cart";
 import ItemList from "components/Items/ItemList";
 import React from "react";
 import Header from "./components/Layout/Header/Header";
 
 function App() {
     return (
-        <div className="App">
+        <React.Fragment>
+            <Cart />
             <Header />
             <ItemList />
-        </div>
+        </React.Fragment>
     );
 }
 
