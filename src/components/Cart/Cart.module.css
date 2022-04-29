@@ -1,0 +1,43 @@
+.modal__inner {
+    padding: 1.5rem;
+
+}
+
+.modal__inner button {
+    border: 1px solid black;
+    border-radius: 14px;
+    padding: 1rem;
+    margin-right: 1rem;
+    color: white;
+}
+
+.modal__inner button:nth-child(1) {
+    color: black;
+}  
+
+.modal__inner button:nth-child(2) {
+    background-color: rgb(204, 149, 48);
+    margin: 0;
+}
+
+.total-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-item {
+    font-size: 1.2rem;
+}
+
+
+.button { 
+    display: flex;
+    justify-content: flex-end;
+}
