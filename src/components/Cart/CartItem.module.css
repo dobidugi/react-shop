@@ -1,0 +1,26 @@
+.item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(227, 227, 227);
+    margin-bottom: 1rem;
+}
+
+.price {
+    color:rgb(235, 173, 59);
+    margin-bottom: 0.5rem;
+}
+
+.amount {
+    margin-left: 1rem;
+    padding: 0 2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.na {
+    display: flex;
+    justify-content: fle-xstart;
+    align-items: center;
+}
