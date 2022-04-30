@@ -3,7 +3,7 @@
 
 }
 
-.modal__inner button {
+.modal__inner .click-button {
     border: 1px solid black;
     border-radius: 14px;
     padding: 1rem;
@@ -11,11 +11,11 @@
     color: white;
 }
 
-.modal__inner button:nth-child(1) {
+.modal__inner .click-button:nth-child(1) {
     color: black;
 }  
 
-.modal__inner button:nth-child(2) {
+.modal__inner .click-button:nth-child(2) {
     background-color: rgb(204, 149, 48);
     margin: 0;
 }
@@ -30,6 +30,8 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    max-height: 30rem;
+    overflow-y: scroll;
 }
 
 .cart-item {
