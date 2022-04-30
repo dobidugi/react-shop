@@ -1,8 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./CartItem.module.css";
 import ItemAmountButton from "./ItemAmountButton";
+import CartContext from "../../store/cart-context";
 function CartItem(props) {
-    const { name, amount, price } = props;
+    const { name, amount, price, id } = props;
+    const ctx = useContext(CartContext);
+
+    const onAddAmount = () => {
+        ctx.addAmount(id);
+    };
+
+    const onSubAmount = () => {
+        ctx.subAmount(id);
+    };
     return (
         <li className={`${props.className} ${classes.item}`}>
             <div>
@@ -12,8 +22,10 @@ function CartItem(props) {
                 </div>
                 <span className={classes.price}>{`$${price}`}</span>
             </div>
-            <ItemAmountButton />
-            
+            <ItemAmountButton 
+                onAdd={onAddAmount}
+                onSub={onSubAmount}
+            />
         </li>
     );
 }
