@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./ItemAmountButton.module.css";
-function ItemAmountButton() {
+function ItemAmountButton(props) {
     return (
         <div>
-            <button className={classes.button}>-</button>
-            <button className={classes.button}>+</button>
+            <button onClick={props.onSub} className={classes.button}>-</button>
+            <button onClick={props.onAdd} className={classes.button}>+</button>
         </div>
     );
 }
